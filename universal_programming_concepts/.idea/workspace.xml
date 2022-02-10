@@ -9,7 +9,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6277d65e-f0e4-46a4-aaf6-ed9b1b63876d" name="Changes" comment="Add a target directory in .gitignore">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +55,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1644465292122</updated>
-      <workItem from="1644465294439" duration="3029000" />
+      <workItem from="1644465294439" duration="3548000" />
     </task>
     <task id="LOCAL-00001" summary="Add a target directory in .gitignore">
       <created>1644465407427</created>
