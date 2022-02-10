@@ -17,4 +17,17 @@ fn main() {
 
     let spaces = "    ";
     let spaces = spaces.len();
+    println!("The value of spaces is: {}", spaces);
+
+    let tup = (500, 6.4, 1);
+    let (_x, y, _z) = tup;
+    println!("The value of y is: {}", y);
+
+    let b: (i32, f64, u8) = (500, 6.5, 1);
+    let _five_hundred = b.0;
+    let _size_point_four = b.1;
+    let _one = b.2;
+    let _arr = [1, 2, 3, 4, 5];
+    let _months = ["January", "February"];
+
 }
