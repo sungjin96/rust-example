@@ -10,6 +10,14 @@ fn main() {
     println!("The value of y is: {}", y);
     println!("The value of five is: {}", five());
     println!("The value of plus_one is: {}", plus_one(5));
+
+    let condition = true;
+    let number = if condition {
+        5
+    } else {
+        6
+    };
+    println!("The value of number is: {}", number);
 }
 
 fn another_function(x: i32, y: i32) {
