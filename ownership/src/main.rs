@@ -12,11 +12,18 @@ fn main() {
     let _y = x;
 
     let s1 = String::from("hello");
-    let _s2 = s1;
-
     let len = calculate_length(&s1);
+
+    let mut s = String::from("hello");
+
+    change(&mut s);
 }
 
 fn calculate_length(s: &String) -> usize {
+    // s.push_str(", world") is Error
     s.len()
+}
+
+fn change(some_string: &mut String) {
+    some_string.push_str(", world");
 }
