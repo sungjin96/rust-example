@@ -1,29 +1,25 @@
 fn main() {
-    // this is area of stack
-    let mut stack_string = "hello";
-    println!("stack: {}", stack_string);
+    let s = String::from("hello world");
+    let word = first_word(&s[..]);
+    println!("word is {}", word);
 
-    // this is area of heap
-    let mut heap_string = String::from("hello");
-    heap_string.push_str(", world!");
-    println!("heap: {}", heap_string);
+    let a = String::from("hello world");
+    let hello = &a[0..5]; // &a[..5]이랑 같은 표현
+    let world = &a[6..11]; // &a[6..a.len()]이랑 같은 표현
 
-    let x = 5;
-    let _y = x;
+    println!("hello is {}", hello);
+    println!("world is {}", world);
 
-    let s1 = String::from("hello");
-    let len = calculate_length(&s1);
-
-    let mut s = String::from("hello");
-
-    change(&mut s);
+    let b = [1,2,3,4,5];
+    let _slice = &b[1..3];
 }
 
-fn calculate_length(s: &String) -> usize {
-    // s.push_str(", world") is Error
-    s.len()
-}
-
-fn change(some_string: &mut String) {
-    some_string.push_str(", world");
+fn first_word(s: &str) -> &str {
+    let bytes = s.as_bytes();
+    for (i, &item) in bytes.iter().enumerate() {
+        if item == b' ' {
+            return &s[0..i];
+        }
+    }
+    &s[..]
 }
