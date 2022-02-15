@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="CargoProjects">
+    <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="364246cb-f4eb-4a39-b4a3-03312984b2ba" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/enumerate.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/enumerate.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,7 +52,8 @@
       <option name="presentableId" value="Default" />
       <updated>1644898604834</updated>
       <workItem from="1644898606266" duration="1000" />
-      <workItem from="1644898614748" duration="687000" />
+      <workItem from="1644898614748" duration="763000" />
+      <workItem from="1644899427845" duration="562000" />
     </task>
     <servers />
   </component>
