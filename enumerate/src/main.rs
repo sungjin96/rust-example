@@ -28,7 +28,6 @@ fn value_in_cents(coin: Coin) -> u32 {
             println!("State quarter from {:?}!", state);
             25
         },
-        _ => (),
     }
 }
 
@@ -39,5 +38,15 @@ fn main() {
     let five = Some(5);
     let six = plus_one(five);
     let none = plus_one(None);
+
+    let some_u8_value = Some(3);
+    if let Some(3) = some_u8_value {
+        println!("three");
+    }
+
+    let mut count = 0;
+    if let Coin::Quarter(state) = Coin::Quarter(UsState::Alaska) {
+        println!("State quarter from {:?}!", state);
+    }
 }
 
