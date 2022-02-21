@@ -1,10 +1,11 @@
-const HIGH_SCORE: i32 = 20;
-static LOW_SCORE: i32 = 0;
-
-fn print_high_score() {
-    println!("The high score is {}", HIGH_SCORE);
-}
+// & immutable reference / shared reference
+// &mut mutable reference / unique reference
 
 fn main() {
-    print_high_score();
+    let mut my_number = 9;
+    let num_ref =  &mut my_number;
+
+    *num_ref = 1;
+
+    println!("Number is now {}", my_number);
 }
