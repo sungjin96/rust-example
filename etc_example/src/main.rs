@@ -1,6 +1,10 @@
+const HIGH_SCORE: i32 = 20;
+static LOW_SCORE: i32 = 0;
+
+fn print_high_score() {
+    println!("The high score is {}", HIGH_SCORE);
+}
+
 fn main() {
-    let mut my_name = "David".to_string();
-    my_name.push('!');
-    my_name.push_str(" and I live in Seoul");
-    println!("My name is {}", my_name);
+    print_high_score();
 }
