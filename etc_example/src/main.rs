@@ -2,10 +2,21 @@
 // &mut mutable reference / unique reference
 
 fn main() {
-    let mut my_number = 9;
-    let num_ref =  &mut my_number;
+    // ERROR !!!
+    // let mut number = 10;
+    // let number_ref = &number;
+    // let number_change = &mut number;
+    // *number_change += 10;
+    // println!("{}", number_ref);
 
-    *num_ref = 1;
+    let mut number = 10;
+    let number_change = &mut number;
+    *number_change += 10;
+    let number_ref = &number;
+    println!("{}", number_ref);
 
-    println!("Number is now {}", my_number);
+    let country = "대한민국";
+    let country_ref = &country;
+    let country = 8;
+    println!("{}, {}", country_ref, country);
 }
