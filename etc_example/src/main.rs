@@ -1,22 +1,22 @@
-// & immutable reference / shared reference
-// &mut mutable reference / unique reference
+// Ownership and copy types
+// copy - copy types
+// clone - non-copy types
+
+fn prints_number(number: i32) {
+    println!("{}", number);
+}
+
+fn prints_string(str: String) {
+    println!("{}", str);
+}
 
 fn main() {
-    // ERROR !!!
-    // let mut number = 10;
-    // let number_ref = &number;
-    // let number_change = &mut number;
-    // *number_change += 10;
-    // println!("{}", number_ref);
+   let my_number = 8;
+    prints_number(my_number);
+    prints_number(my_number);
 
-    let mut number = 10;
-    let number_change = &mut number;
-    *number_change += 10;
-    let number_ref = &number;
-    println!("{}", number_ref);
+    let my_str = "aaaaa".to_string();
+    prints_string(my_str.clone());
+    prints_string(my_str);
 
-    let country = "대한민국";
-    let country_ref = &country;
-    let country = 8;
-    println!("{}, {}", country_ref, country);
 }
