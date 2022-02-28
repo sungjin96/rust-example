@@ -1,22 +1,18 @@
-// Ownership and copy types
-// copy - copy types
-// clone - non-copy types
-
-fn prints_number(number: i32) {
-    println!("{}", number);
-}
-
-fn prints_string(str: String) {
-    println!("{}", str);
+fn loop_then_return(mut counter: i32) -> i32{
+   loop {
+       counter += 1;
+       if counter % 50 == 0 {
+           break;
+       }
+   }
+    counter
 }
 
 fn main() {
-   let my_number = 8;
-    prints_number(my_number);
-    prints_number(my_number);
-
-    let my_str = "aaaaa".to_string();
-    prints_string(my_str.clone());
-    prints_string(my_str);
-
+    let my_number;
+    {
+        let x = loop_then_return(0);
+        my_number = x
+    };
+    println!("{}", my_number);
 }
