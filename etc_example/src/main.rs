@@ -1,10 +1,12 @@
-// trait = 초능력
-// This type implements (trait name)
-
-// From, Into
+// tuples
 
 fn main() {
-    let my_name = String::from("dave Macleod");
-    let my_city: String = "Seoul".into();
-    let my_vec = Vec::from([1, 2, 3]);
+    let my_tuple = (8, "SJ", vec![8, 9, 10]);
+
+    println!("{:?}", my_tuple);
+    println!("{:?}", my_tuple.0);
+    println!("{:?}", my_tuple.1);
+    println!("{:?}", my_tuple.2);
+
+    let (a,b,c) = my_tuple;
 }
