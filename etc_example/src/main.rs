@@ -29,6 +29,6 @@ fn main() {
         capital: "Ottawa".to_string(),
         leader_name: "Justin Trudeau".to_string()
     };
-    println!("The Country is: {:?}", canada);
+    println!("The Country is: {:#?}", canada);
     println!("The Country is: {:?}", canada.capital);
 }
