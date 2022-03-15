@@ -1,13 +1,10 @@
-fn match_colors(rgb: (u32, u32, u32)) {
-    match rgb {
-        (r, _, _) if r < 10 => println!("Not much red"),
-        (_, g, _) if g < 10 => println!("Not much green"),
-        (_, _, b) if b < 10 => println!("Not much blue"),
-        _ => println!("Every colors has at least 10")
+fn match_number(input: i32) {
+    match input {
+        number @ 0..=10 => println!("it's between 0 and 10. {}", number),
+        _ => println!("It's greater than ten")
     }
 }
 
-
 fn main() {
-    match_colors((1, 2, 3))
+
 }
