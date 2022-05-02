@@ -1,35 +1,15 @@
-use std::mem::size_of_val;
-
-#[derive(Debug)]
-struct Country {
-    population: u32,
-    capital: String,
-    leader_name: String,
-}
-
-struct Numbers {
-    one: u8,
-    two: u8,
-    three: u8,
-    four: char
-}
-
-
 fn main() {
-    let population = 35_000_000;
-    let capital = "Ottawa".to_string();
-    let leader_name = "Justin Trudeau".to_string();
-    let canada = Country { population, capital, leader_name };
-    println!("The Country is: {:#?}", canada);
-    println!("The Country is: {:?}", canada.capital);
-    println!("Country is {} bytes in size", size_of_val(&canada));
+    string_and_str();
+}
 
-    let numbers = Numbers {
-        one: 8,
-        two: 19,
-        three: 20,
-        four: 'a'
-    };
+// 14 강
+fn string_and_str() {
+    // String = Sized type -> heap
+    // &str = Dynamic type
+    let _my_name = "SJ"; // &str
+    let _other_name = String::from("SJ");
 
-    println!("Numbers is {} bytes in size", size_of_val(&numbers));
+    let mut my_other_name = "SJ".to_string();
+    my_other_name.push('!');
+    println!("{my_other_name}");
 }
