@@ -1,9 +1,22 @@
 fn main() {
-    const_and_static();
 }
 // ==============================
+// 17 강
+// Ownership - 소유권
+// & = reference
+// 밑 함수 처럼 진행하면 안됨
+// 이유 - country 변수가 언제 어떻게 사라지고 사용될지 알 수 없음.
+// 메모리 보안?안전을 위한 이유임
+fn return_it() -> &String {
+    let country = String::from("대한민국");
+    &country
+}
 
+fn returning_a_reference() {
+    println!("Country is: {}", return_it());
+}
 
+// ==============================
 // 16 강
 // const
 // static
@@ -17,11 +30,10 @@ fn print_high_score() {
    println!("The high score is {HIGH_SCORE}") ;
 }
 
-fn const_and_static() {
+fn _const_and_static() {
    print_high_score();
 }
 // ==============================
-
 // 15 강
 // capacity / push / push_str / pop / with_capacity
 fn _string_method() {
