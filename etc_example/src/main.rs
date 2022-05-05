@@ -1,26 +1,50 @@
 fn main() {
-    mutable_references_and_mut_in_functions();
+    copy_and_clone();
 }
+// ==============================
+// 22 강
+// i32 = default copy / copy types
+// copy - copy types
+// clone - non-copy types
+
+// fn prints_number(number: i32) {
+//     println!("{}", number);
+// }
+//
+// fn prints_string(input: String) {
+//     println!("{}", input)
+// }
+//
+// fn copy_and_clone() {
+//     let my_number = 9;
+//     prints_number(my_number);
+//     prints_number(my_number);
+//
+//     let my_country = String::from("KR");
+//     prints_string(my_country.clone());
+//     prints_string(my_country.clone());
+// }
+
 // ==============================
 // 21 강
 
-fn add_is_great_ref(country_name: &mut String) {
-   country_name.push_str(" is Great!");
-   println!("Now it says: {}", country_name);
-}
-
-fn add_is_great_mut(mut country_name: String) {
-    country_name.push_str(" is Great!");
-    println!("Now it says: {}", country_name);
-}
-
-fn mutable_references_and_mut_in_functions() {
-    let mut my_country = "대한민국".to_string();
-    add_is_great_ref(&mut my_country);
-    add_is_great_ref(&mut my_country);
-    let country = "대한민국".to_string();
-    add_is_great_mut(country);
-}
+// fn add_is_great_ref(country_name: &mut String) {
+//    country_name.push_str(" is Great!");
+//    println!("Now it says: {}", country_name);
+// }
+//
+// fn add_is_great_mut(mut country_name: String) {
+//     country_name.push_str(" is Great!");
+//     println!("Now it says: {}", country_name);
+// }
+//
+// fn mutable_references_and_mut_in_functions() {
+//     let mut my_country = "대한민국".to_string();
+//     add_is_great_ref(&mut my_country);
+//     add_is_great_ref(&mut my_country);
+//     let country = "대한민국".to_string();
+//     add_is_great_mut(country);
+// }
 // ==============================
 // 20 강
 
