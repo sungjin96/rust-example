@@ -4,15 +4,22 @@ fn main() {
 // ==============================
 // 21 강
 
-fn add_is_great(country_name: &mut String) {
+fn add_is_great_ref(country_name: &mut String) {
    country_name.push_str(" is Great!");
    println!("Now it says: {}", country_name);
 }
 
+fn add_is_great_mut(mut country_name: String) {
+    country_name.push_str(" is Great!");
+    println!("Now it says: {}", country_name);
+}
+
 fn mutable_references_and_mut_in_functions() {
     let mut my_country = "대한민국".to_string();
-    add_is_great(&mut my_country);
-    add_is_great(&mut my_country);
+    add_is_great_ref(&mut my_country);
+    add_is_great_ref(&mut my_country);
+    let country = "대한민국".to_string();
+    add_is_great_mut(country);
 }
 // ==============================
 // 20 강
