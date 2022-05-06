@@ -1,40 +1,39 @@
 fn main() {
-    uninitialized_variables_and_for_loop();
 }
 // ==============================
 // 23 강
-
-fn loop_then_return(mut counter: i32) -> i32 {
-   loop {
-       counter += 1;
-       if counter % 50 == 0 {
-           break;
-       }
-   }
-    counter
-}
-
-fn uninitialized_variables_and_for_loop() {
-   let my_number = {
-       // 블라블라블라
-       let x = loop_then_return(32);
-       x + 10
-   };
-
-    println!("{}", my_number);
-
-    for n in 1..101 {
-        if n % 15 == 0 {
-            println!("fizzbuzz");
-        } else if n % 3 == 0 {
-            println!("fizz");
-        } else if n % 5 == 0 {
-            println!("buzz");
-        } else {
-            println!("{}", n);
-        }
-    }
-}
+//
+// fn loop_then_return(mut counter: i32) -> i32 {
+//    loop {
+//        counter += 1;
+//        if counter % 50 == 0 {
+//            break;
+//        }
+//    }
+//     counter
+// }
+//
+// fn uninitialized_variables_and_for_loop() {
+//    let my_number = {
+//        // 블라블라블라
+//        let x = loop_then_return(32);
+//        x + 10
+//    };
+//
+//     println!("{}", my_number);
+//
+//     for n in 1..101 {
+//         if n % 15 == 0 {
+//             println!("fizzbuzz");
+//         } else if n % 3 == 0 {
+//             println!("fizz");
+//         } else if n % 5 == 0 {
+//             println!("buzz");
+//         } else {
+//             println!("{}", n);
+//         }
+//     }
+// }
 
 // ==============================
 // 22 강
