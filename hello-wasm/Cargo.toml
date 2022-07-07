@@ -11,6 +11,9 @@ repository = "https://github.com/sungjin96/hello-wasm"
 opt-level = 'z'
 lto = true
 
+[package.metadata.wasm-pack.profile.release]
+wasm-opt = false
+
 [lib]
 crate-type = ["cdylib", "rlib"]
 
