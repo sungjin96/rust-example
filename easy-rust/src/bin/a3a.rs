@@ -10,4 +10,15 @@
 // * Use an if..else block to determine which message to display
 // * Use the println macro to display messages to the terminal
 
-fn main() {}
+fn main() {
+    let value = false;
+    run(value);
+}
+
+fn run(value: bool) {
+   if value {
+       println!("hello");
+   } else {
+       println!("goodbye");
+   }
+}
