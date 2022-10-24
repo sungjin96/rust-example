@@ -9,19 +9,17 @@
 //   an if..else expression to store whether the value
 //   is > 100 or <= 100
 // * Use a function to print the messages
+fn println_message(gt_100: bool) {
+    match gt_100 {
+        true => println!("its big"),
+        false => println!("its small")
+    }
+}
 // * Use a match expression to determine which message
 //   to print
 
 fn main() {
     let num = 100;
-    let result = if num > 100 {
-        true
-    } else {
-        false
-    };
-
-    match result {
-        true => println!("its big"),
-        false => println!("its small")
-    }
+    let result = num > 100;
+    println_message(result);
 }
