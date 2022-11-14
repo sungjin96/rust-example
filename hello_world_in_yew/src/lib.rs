@@ -18,6 +18,8 @@ pub fn app() -> Html {
     let class = "my_title";
     let message: Option<&str> = None;
 
+    let tasks = vec!["record video", "grocery shopping", "pet Xilbe"];
+
     html! {
         <>
             <h1 class={class}>{"Hello World"}</h1>
@@ -33,6 +35,10 @@ pub fn app() -> Html {
             } else {
                 <p>{"no messages to see today"}</p>
             }
+
+            <ul>
+                {tasks.iter().map(|task| html!{<li>{task}</li>}).collect::<Html>()}
+            </ul>
         </>
    }
 }
