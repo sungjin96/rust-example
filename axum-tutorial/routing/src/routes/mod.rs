@@ -10,6 +10,7 @@ mod middleware_custom_header;
 mod set_middleware_custom_header;
 mod always_errors;
 mod returns_201;
+mod get_json;
 
 use axum::{body::Body, routing::{get, post}, Router, Extension, middleware};
 use axum::http::Method;
@@ -26,6 +27,7 @@ use middleware_custom_header::middleware_custom_header;
 use set_middleware_custom_header::set_middleware_custom_header;
 use always_errors::always_errors;
 use returns_201::returns_201;
+use get_json::get_json;
 
 #[derive(Clone)]
 pub struct SharedData {
@@ -54,5 +56,5 @@ pub fn create_routes() -> Router<Body> {
         .layer(cors)
         .route("/always-errors", get(always_errors))
         .route("/returns-201", post(returns_201))
-
+        .route("/get-json", get(get_json))
 }
